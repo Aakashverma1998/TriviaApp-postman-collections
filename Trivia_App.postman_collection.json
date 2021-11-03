@@ -1,0 +1,801 @@
+{
+	"info": {
+		"_postman_id": "b0739443-1815-425d-a870-0fa5c55a0a34",
+		"name": "Trivia_App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getUserList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5004/api/v1/user/getAllUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getAllUser"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getUserList",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"jhon\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/api/v1/user/getAllUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"getAllUser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c6-GLDETNbANbLO4Crqbc6pt9ALz+I\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Nov 2021 01:51:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"status_code\": 200,\n    \"message\": \"Data Success\",\n    \"data\": [\n        {\n            \"_id\": \"6181e8c91ef1ed4b95416556\",\n            \"name\": \"jhon\",\n            \"createAt\": \"2021-11-03T01:35:13.478Z\",\n            \"updatedAt\": \"2021-11-03T01:35:13.478Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "addUserAnswer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"answer\":[\" Sachin Tendulkar\"],\n    \"userId\":\"6181eff0a277fdabea63e6ce\",\n    \"questionId\":\"6181ef14a277fdabea63e6cc\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5004/api/v1/user/addUserAnswer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"addUserAnswer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addUserAnswer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"answer\":[\" Sachin Tendulkar\"],\n    \"userId\":\"6181eff0a277fdabea63e6ce\",\n    \"questionId\":\"6181ef14a277fdabea63e6cc\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/api/v1/user/addUserAnswer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"addUserAnswer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "264"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"108-ki4zVOzf7uu/uxNAhR5UDh4lIPc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Nov 2021 02:18:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"status_code\": 200,\n    \"message\": \"Correct Answer\",\n    \"data\": {\n        \"_id\": \"6181f0f7a277fdabea63e6d1\",\n        \"Question\": \"6181ef14a277fdabea63e6cc\",\n        \"__v\": 0,\n        \"answer\": [\n            \" Sachin Tendulkar\"\n        ],\n        \"createdAt\": \"2021-11-03T02:00:01.453Z\",\n        \"userDetails\": \"6181eff0a277fdabea63e6ce\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getUserResult",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"6181e8c91ef1ed4b95416556\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5004/api/v1/user/getUserResult",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getUserResult"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getUserResult",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\":\"6181e8c91ef1ed4b95416556\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/api/v1/user/getUserResult",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"getUserResult"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "521"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"209-YcdYvADz6p329eejHV61Vve7vAs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Nov 2021 02:32:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"status_code\": 200,\n    \"message\": \"User results\",\n    \"data\": [\n        {\n            \"_id\": \"6181f0f7a277fdabea63e6d1\",\n            \"Question\": {\n                \"_id\": \"6181ef14a277fdabea63e6cc\",\n                \"title\": \"Who is the best cricketer in the world?\",\n                \"options\": {\n                    \"A)\": \"Sachin Tendulkar\",\n                    \"B)\": \" Virat Kolli\",\n                    \"C)\": \"Adam Gilchirst\",\n                    \"D)\": \"Jacques Kallis\"\n                },\n                \"answer\": [\n                    \"Sachin Tendulkar\"\n                ],\n                \"createdAt\": \"2021-11-03T02:00:01.457Z\",\n                \"__v\": 0\n            },\n            \"__v\": 0,\n            \"answer\": [\n                \" Sachin Tendulkar\"\n            ],\n            \"createdAt\": \"2021-11-03T02:00:01.453Z\",\n            \"userDetails\": {\n                \"_id\": \"6181eff0a277fdabea63e6ce\",\n                \"name\": \"jhon\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "getUserallResult",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5004/api/v1/user/getUserallResult",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getUserallResult"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getUserallResult",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/api/v1/user/getUserallResult",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"getUserallResult"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "425"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a9-iR/3DCLraDyrmeUUeYBeCf6UaDA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Nov 2021 08:20:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"status_code\": 200,\n    \"message\": \"User all results\",\n    \"data\": [\n        {\n            \"_id\": \"618243b32a97dcedcf58c567\",\n            \"Question\": {\n                \"_id\": \"618243272a97dcedcf58c564\",\n                \"title\": \"What are the colors in the Indian national flag? \",\n                \"options\": {\n                    \"A)\": \"White\",\n                    \"B)\": \"Yellow\",\n                    \"C)\": \"Orange\",\n                    \"D)\": \"Green\"\n                },\n                \"answer\": [\n                    \"Green,Orange,White\"\n                ],\n                \"createdAt\": \"2021-11-03T08:01:33.127Z\",\n                \"__v\": 0\n            },\n            \"userDetails\": {\n                \"_id\": \"618243092a97dcedcf58c561\",\n                \"name\": \"jhon\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"jhon\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5004/api/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"jhon\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/api/v1/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d2-DKk9veQjKhLdmVcm8eiZTu0ZD5E\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Nov 2021 08:39:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"status_code\": 200,\n    \"message\": \"User Register Successfully\",\n    \"data\": {\n        \"name\": \"jhon\",\n        \"createAt\": \"2021-11-03T08:31:39.037Z\",\n        \"updatedAt\": \"2021-11-03T08:31:39.037Z\",\n        \"_id\": \"61824aaceaf081a1b22ad698\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "addQuestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"What are the colors in the Indian national flag? \",\n    \"options\":{\"A)\": \"White\",\"B)\":\"Yellow\",\"C)\":\"Orange\",\"D)\":\"Green\"},\n    \"answer\":[\"Green,Orange,White\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5004/api/v1/questions/addQuestion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								"addQuestion"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addQuestion",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"What are the colors in the Indian national flag? \",\n    \"options\":{\"A)\": \"White\",\"B)\":\"Yellow\",\"C)\":\"Orange\",\"D)\":\"Green\"},\n    \"answer\":[\"Green,Orange,White\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/api/v1/questions/addQuestion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"addQuestion"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "312"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"138-lyh3CnfnR7ToIyxp5+3wHYB5+Cg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Nov 2021 05:22:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"status_code\": 200,\n    \"message\": \"Question Added\",\n    \"data\": {\n        \"title\": \"What are the colors in the Indian national flag? \",\n        \"options\": {\n            \"A)\": \"White\",\n            \"B)\": \"Yellow\",\n            \"C)\": \"Orange\",\n            \"D)\": \"Green\"\n        },\n        \"answer\": [\n            \"Green,Orange,White\"\n        ],\n        \"createdAt\": \"2021-11-03T05:21:10.089Z\",\n        \"_id\": \"61821c8e1f53b9b5a1e2f468\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getQuestionByFillter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pageSize\":\"1\",\n    \"sortByField\":\"\",\n    \"sortOrder\":\"\",\n    \"paged\":\"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5004/api/v1/questions/getQuestionByFillter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								"getQuestionByFillter"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getQuestionByFillter",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"pageSize\":\"1\",\n    \"sortByField\":\"\",\n    \"sortOrder\":\"\",\n    \"paged\":\"2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/api/v1/questions/getQuestionByFillter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"getQuestionByFillter"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "314"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13a-wkBKjaRXmnzELFPXiKnDRkyx6RM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Nov 2021 08:35:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"status_code\": 200,\n    \"message\": \"DASHBOARD_LIST\",\n    \"data\": [\n        {\n            \"_id\": \"618243272a97dcedcf58c564\",\n            \"title\": \"What are the colors in the Indian national flag? \",\n            \"options\": {\n                \"A)\": \"White\",\n                \"B)\": \"Yellow\",\n                \"C)\": \"Orange\",\n                \"D)\": \"Green\"\n            },\n            \"answer\": [\n                \"Green,Orange,White\"\n            ],\n            \"createdAt\": \"2021-11-03T08:01:33.127Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "getQuestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"limit\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5004/api/v1/questions/getQuestion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								"getQuestion"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getQuestion",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"limit\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/api/v1/questions/getQuestion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"getQuestion"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "512"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"200-iENVOZ71D1tyVsLvypLHocMMnRA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 03 Nov 2021 08:50:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"status_code\": 200,\n    \"message\": \"Data Success\",\n    \"data\": [\n        {\n            \"_id\": \"61824b14eaf081a1b22ad69b\",\n            \"title\": \"What are the colors in the Indian national flag? \",\n            \"options\": {\n                \"A)\": \"White\",\n                \"B)\": \"Yellow\",\n                \"C)\": \"Orange\",\n                \"D)\": \"Green\"\n            },\n            \"createdAt\": \"2021-11-03T08:31:39.057Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"61824c69eaf081a1b22ad6aa\",\n            \"title\": \"Who is the best cricketer in the world? \",\n            \"options\": {\n                \"A)\": \"Sachin Tendulkar\",\n                \"B)\": \"Virat Kolli\",\n                \"C)\": \"Adam Gilchirst\",\n                \"D)\": \"Jacques Kallis\"\n            },\n            \"createdAt\": \"2021-11-03T08:31:39.057Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
